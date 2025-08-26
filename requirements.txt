@@ -1,0 +1,7 @@
+pydantic==2.9.2
+requests==2.31.0
+PyJWT==2.10.1
+pandas==2.2.3
+numpy==2.2.2
+redis==5.2.1
+python-gnupg==0.5.4

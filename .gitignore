@@ -1,0 +1,12 @@
+*.pem
+*.tar.gz
+__pycache__/
+*.pyc
+.env
+
+demo/*
+!demo/input/
+
+.idea/
+
+.DS_Store
