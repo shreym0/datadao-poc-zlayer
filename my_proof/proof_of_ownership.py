@@ -22,8 +22,8 @@ def calculate_ownership_score(jwt_token: str, data: dict, validator_url: str) ->
     """Calculate ownership score by verifying data against an external API."""
     if not jwt_token or not isinstance(jwt_token, str):
         raise ValueError('JWT token is required and must be a string')
-    if not data.get('walletAddress') or not data.get('type'):
-        raise ValueError('Invalid data format. Ensure walletAddress is a non-empty string and type is provided.')
+    if not data.get('walletAddress'):
+        raise ValueError('Invalid data format. Ensure walletAddress is a non-empty string and type is a non-empty array.')
 
     try:
         headers = {
