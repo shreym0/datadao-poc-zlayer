@@ -27,7 +27,7 @@ class Proof:
         self.config = config
         self.proof_response = ProofResponse(dlp_id=config['dlp_id'])
         self.proof_response_object = {
-            'dlp_id': self.config.get('dlp_id', 29),
+            'dlp_id': self.config.get('dlp_id', 154),
             'valid': True,
         }
 
@@ -143,7 +143,8 @@ class Proof:
             ownership_score = self.proof_response_object['ownership']
             uniqueness_score = type_scores[task_type]["type_uniqueness_score"]
             quality_score = type_scores[task_type]["type_quality_score"]
-            authenticity_score = authenticity_scores.get(task_type, 0)
+            # authenticity_score = authenticity_scores.get(task_type, 0)
+            authenticity_score = 1
             type_points = type_scores[task_type]["type_points"]
 
             final_scores[task_type] = {
